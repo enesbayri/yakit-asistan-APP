@@ -1,4 +1,4 @@
-# ***Yakıt Asistan***
+# <img src="assets/icons/mainIcon.png"  width="35"> ***Yakıt Asistan***
 
 <hr>
 <br>
