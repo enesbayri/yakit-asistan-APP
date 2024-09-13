@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "982316071462",
+    "project_id": "yakitasistan",
+    "storage_bucket": "yakitasistan.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:982316071462:android:39cd12b5ae82406a70c4e7",
+        "android_client_info": {
+          "package_name": "ebaysoft.yakit_asistan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "982316071462-9ia4brvecrqu5lhugth5pd5ihv3km87d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ebaysoft.yakit_asistan",
+            "certificate_hash": "b93faa57cfa320a415b5749603c87d6c444a3312"
+          }
+        },
+        {
+          "client_id": "982316071462-qf73aruefb5noe20gspfjituqd9ba317.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ebaysoft.yakit_asistan",
+            "certificate_hash": "94edb91324517627ff2a3b7f7a32622c742344cc"
+          }
+        },
+        {
+          "client_id": "982316071462-porlofqu7blkrrfvqj1k4c97f57a8aq9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC0ovzYsLMqbubwvyOISMXKn5IbxZEEtE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "982316071462-porlofqu7blkrrfvqj1k4c97f57a8aq9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "982316071462-muqq4utsogi6j8059a4dk6q57m3hl980.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ebaysoft.yakitAsistan"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
