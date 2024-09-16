@@ -113,7 +113,7 @@ class MyCarCard extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(2.0),
                 child: Hero(
-                  tag: carImg,
+                  tag: carName,
                   child: Container(
                     decoration: BoxDecoration(
                         borderRadius: const BorderRadius.only(

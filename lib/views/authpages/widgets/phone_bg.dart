@@ -21,13 +21,13 @@ class _LoginRegisterPhoneBGState extends State<LoginRegisterPhoneBG>
   void initState() {
     super.initState();
     createAnimation();
+    AnimationControll.loginController.forward();
+    
   }
-
   final screen = locator<ScreenSizeHelper>();
 
   @override
   Widget build(BuildContext context) {
-    AnimationControll.loginController.forward();
     return AnimatedBuilder(
       animation: AnimationControll.loginController,
       builder: (context, child) => Align(

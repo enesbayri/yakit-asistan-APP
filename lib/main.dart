@@ -48,13 +48,19 @@ class FuelAssistant extends StatefulWidget {
 
 class _FuelAssistantState extends State<FuelAssistant>
     with TickerProviderStateMixin {
+  bool _isInitialized = false;
   @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    AnimationControll.createAnimations(this, context);
-    startScreenSized(
-        MediaQuery.of(context).size.width, MediaQuery.of(context).size.height);
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!_isInitialized) {
+        AnimationControll.createAnimations(this, context);
+        _getScreenSize();
+        _isInitialized = true; // Sadece bir kez çalıştırılacak
+      }
+    });
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -83,6 +89,11 @@ class _FuelAssistantState extends State<FuelAssistant>
         home: const HomePage(),
       ),
     );
+  }
+   void _getScreenSize() {
+    // Ekran ölçülerini alıyoruz
+    startScreenSized(
+        MediaQuery.of(context).size.width, MediaQuery.of(context).size.height);
   }
 
   @override

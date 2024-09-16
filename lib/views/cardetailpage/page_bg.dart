@@ -17,7 +17,7 @@ class CarDetailBackground extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     Car car = ref.read(detailPageSelectedCarProvider);
     return Hero(
-      tag: car.imageUrl,
+      tag: car.name,
       child: Container(
         width: screen.width,
         height: screen.height / 10 * 6,

@@ -17,14 +17,14 @@ class FuelAssistantRepository {
   Future<List<Trip>> getTripList() async {
     bool hasConnection = await connection.hasConnection;
     if (dbRoute.isLocalDbRouter()) {
-      return hiveDatabase.getTripsfromStorage();
+      return hiveDatabase.getTripsfromStorage().reversed.toList();
     } else if (!(hasConnection)) {
-      return hiveDatabase.getTripsfromStorage();
+      return hiveDatabase.getTripsfromStorage().reversed.toList();
     } else {
       //if user online
       String? userId = auth.getUserId();
       if (userId != null) {
-        return await firestoreDatabase.getTripsFromStorage(userId);
+        return (await firestoreDatabase.getTripsFromStorage(userId)).reversed.toList();
       } else {
         return [];
       }
@@ -117,32 +117,42 @@ class FuelAssistantRepository {
   }
 
   Future<void> deleteCar(Car currentCar) async {
-    bool hasConnection = await connection.hasConnection;
-    if (dbRoute.isLocalDbRouter()) {
-      await hiveDatabase.deleteCar(currentCar);
-    } else if (!(hasConnection)) {
-      await hiveDatabase.deleteCar(currentCar);
-    } else {
-      //if user online
-      String? userId = auth.getUserId();
-      if (userId != null) {
-        await firestoreDatabase.deleteCar(userId, currentCar);
+    try {
+      bool hasConnection = await connection.hasConnection;
+      if (dbRoute.isLocalDbRouter()) {
+        await hiveDatabase.deleteCar(currentCar);
+      } else if (!(hasConnection)) {
+        await hiveDatabase.deleteCar(currentCar);
+      } else {
+        //if user online
+        String? userId = auth.getUserId();
+        if (userId != null) {
+          await firestoreDatabase.deleteCar(userId, currentCar);
+        }
       }
+    } catch (e) {
+      throw e.toString();
     }
+    
   }
 
   Future<void> deleteTrip(Trip trip, int tripId) async {
-    bool hasConnection = await connection.hasConnection;
-    if (dbRoute.isLocalDbRouter()) {
-      await hiveDatabase.deleteTrip(trip.carName, tripId);
-    } else if (!(hasConnection)) {
-      await hiveDatabase.deleteTrip(trip.carName, tripId);
-    } else {
-      //if user online
-      String? userId = auth.getUserId();
-      if (userId != null) {
-        await firestoreDatabase.deleteTrip(userId, trip);
+    try {
+      bool hasConnection = await connection.hasConnection;
+      if (dbRoute.isLocalDbRouter()) {
+        await hiveDatabase.deleteTrip(trip.carName, tripId);
+      } else if (!(hasConnection)) {
+        await hiveDatabase.deleteTrip(trip.carName, tripId);
+      } else {
+        //if user online
+        String? userId = auth.getUserId();
+        if (userId != null) {
+          await firestoreDatabase.deleteTrip(userId, trip);
+        }
       }
+    } catch (e) {
+      throw "Bir hata oluştu!";
     }
+    
   }
 }

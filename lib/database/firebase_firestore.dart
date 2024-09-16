@@ -183,7 +183,7 @@ class FirestoreDatabase extends Database {
         var encodedData = doc.data() as Map<String, dynamic>;
         var carList = encodedData["cars"] as List;
         var carListLenght = carList.length;
-        carList.removeWhere((e) => e["id"] == car.id);
+        carList.removeWhere((e) => e["name"] == car.name);
         if (carListLenght != carList.length) {
           await locator<CloudstoreRepository>()
               .deleteCarImageToCloudstore(userId, car.name);
@@ -322,6 +322,7 @@ class FirestoreDatabase extends Database {
     var cloudstore = locator<CloudstoreRepository>();
     if (carSnapshot.docs.isEmpty) {
       if (cars.length <= 10) {
+        debugPrint(" 11111 çalistiiiiiiiii");
         for (var i = 0; i < cars.length; i++) {
           cars[i].imageUrl = await cloudstore.addImgToCloudStore(
               userId, cars[i].name, File(cars[i].imageUrl));
@@ -332,6 +333,7 @@ class FirestoreDatabase extends Database {
           "carCount": cars.length
         });
       } else {
+        debugPrint(" 2222 çalistiiiiiiiii");
         int docCount = cars.length ~/ 10;
         for (var i = 0; i < docCount; i++) {
           var newList = cars.sublist(i * 10, (i + 1) * 10);
@@ -349,6 +351,7 @@ class FirestoreDatabase extends Database {
       }
     } else {
       if (cars.length <= 10) {
+        debugPrint(" 3333 çalistiiiiiiiii");
         var carData = carSnapshot.docs[0].data() as Map<String, dynamic>;
         var carCount = carData["carCount"] as int;
         if (carCount + cars.length <= 10) {
@@ -362,6 +365,7 @@ class FirestoreDatabase extends Database {
             "carCount": FieldValue.increment(cars.length)
           });
         } else {
+          debugPrint(" 44444 çalistiiiiiiiii");
           var newList = cars.sublist(0, 10 - carCount);
           var remainList = cars.sublist(10 - carCount, cars.length);
           for (var i = 0; i < newList.length; i++) {
@@ -385,6 +389,7 @@ class FirestoreDatabase extends Database {
           });
         }
       } else {
+        debugPrint(" 55555 çalistiiiiiiiii");
         int docCount = cars.length ~/ 10;
         for (var i = 0; i < docCount; i++) {
           var newList = cars.sublist(i * 10, (i + 1) * 10);

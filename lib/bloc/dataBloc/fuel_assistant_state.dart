@@ -19,3 +19,5 @@ class GetDataState extends FuelAssistantState {
 }
 
 class LoadingDataState extends FuelAssistantState {}
+
+class ErrorDataState extends FuelAssistantState{}

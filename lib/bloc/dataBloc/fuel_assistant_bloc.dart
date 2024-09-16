@@ -73,7 +73,11 @@ class FuelAssistantBloc extends Bloc<FuelAssistantEvent, FuelAssistantState> {
 
     on<DeleteTripEvent>((event, emit) async {
       emit(LoadingDataState());
-      await fuelAssistantRepo.deleteTrip(event.trip, event.tripId);
+      try {
+        await fuelAssistantRepo.deleteTrip(event.trip, event.tripId);
+      } catch (e) {
+        emit(ErrorDataState());
+      }
       emit(GetDataState(
           cars: await fuelAssistantRepo.getCarList(),
           trips: await fuelAssistantRepo.getTripList()));
@@ -81,7 +85,11 @@ class FuelAssistantBloc extends Bloc<FuelAssistantEvent, FuelAssistantState> {
 
     on<DeleteCarEvent>((event, emit) async {
       emit(LoadingDataState());
-      await fuelAssistantRepo.deleteCar(event.currentCar);
+      try {
+        await fuelAssistantRepo.deleteCar(event.currentCar);
+      } catch (e) {
+        emit(ErrorDataState());
+      }
       emit(GetDataState(
           cars: await fuelAssistantRepo.getCarList(),
           trips: await fuelAssistantRepo.getTripList()));

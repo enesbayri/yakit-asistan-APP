@@ -10,6 +10,7 @@ import 'package:yakit_asistan/tools/color_helper.dart';
 import 'package:yakit_asistan/tools/screen_helper.dart';
 import 'package:yakit_asistan/tools/text_style_helper.dart';
 import 'package:yakit_asistan/views/commonwidgets/empty_data_info.dart';
+import 'package:yakit_asistan/views/commonwidgets/error_snackbar.dart';
 import 'package:yakit_asistan/views/commonwidgets/loading_widget.dart';
 import 'package:yakit_asistan/views/tripspage/car_filter_bar.dart';
 import 'package:yakit_asistan/views/tripspage/trip_card.dart';
@@ -29,6 +30,10 @@ class MyTripsPageContent extends ConsumerWidget {
       if (state is LoadingDataState) {
         return LoadingWidget();
       } else {
+        if (state is ErrorDataState) {
+          ErrorSnackBar.showErrorSnackBar(context, title: "Bir hata oluştu!");
+          return LoadingWidget();
+        }else {
         return state.trips.isEmpty
             ? EmptyDataInfo(title: "Seyahat Yok!")
             : ListView.builder(
@@ -92,6 +97,7 @@ class MyTripsPageContent extends ConsumerWidget {
                     1, // 0 ıncı indexte araçlar barı bulunacağı için 1 index fazla alınacak
               );
       }
+    }
     });
   }
 }
