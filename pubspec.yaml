@@ -60,6 +60,7 @@ dependencies:
   image_picker: ^1.0.8
   firebase_storage: ^11.6.9
   mongo_dart: ^0.10.0
+  google_mobile_ads: ^4.0.0
 
 dev_dependencies:
   flutter_test:

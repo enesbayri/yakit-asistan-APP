@@ -48,6 +48,11 @@ ios/Runner/GoogleService-Info.plist
 ios/Runner.xcworkspace/GoogleService-Info.plist
 firebase.json
 
+# Admob kimlikleri
+/ios/Runner/Info.plist
+/android/app/src/main/AndroidManifest.xml
+/lib/services/addmob_service.dart
+
 # Android Key Store
 key.jks
 

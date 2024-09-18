@@ -136,7 +136,7 @@ class HiveDatabase extends Database {
 
   Future<void> deleteTrip(String carName, int tripId) async {
     List<Car> cars = getCarsfromStorage();
-    List<Trip> trips = getTripsfromStorage();
+    List<Trip> trips = getTripsfromStorage().reversed.toList(); //liste gösterim olarak lokalden ters geldiği için çevrilir.
 
     Car? car = Car.seachCarfromName(carName, cars);
     if (car.name != "") {
@@ -145,7 +145,7 @@ class HiveDatabase extends Database {
     trips.removeAt(tripId);
 
     await updateCarStorage(cars);
-    await updateTripStorage(trips);
+    await updateTripStorage(trips.reversed.toList()); //liste tekrar ters kaydedilir.
   }
 
   bool getDatabaseRouter() {
