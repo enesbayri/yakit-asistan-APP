@@ -17,7 +17,7 @@ class LoginRegisterButton extends StatelessWidget {
       child: TextButton(
         style: ButtonStyle(
             backgroundColor:
-                MaterialStatePropertyAll(ColorUiHelper.appMainColor)),
+                WidgetStatePropertyAll(ColorUiHelper.appMainColor)),
         onPressed: onPressed,
         child: Text(
           text,

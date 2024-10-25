@@ -56,8 +56,8 @@ class AddCarTypeDrowDown extends ConsumerWidget {
         excludeSelected: false,
         onChanged: (value) {
           isEditted
-              ? ref.read(detailPageSelectedCarProvider).type = value
-              : ref.read(addCarProvider.notifier).state.type = value;
+              ? ref.read(detailPageSelectedCarProvider).type = value!
+              : ref.read(addCarProvider.notifier).state.type = value!;
         },
       ),
     );

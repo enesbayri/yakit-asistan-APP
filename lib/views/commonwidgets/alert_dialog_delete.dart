@@ -29,7 +29,7 @@ class AlertDialogForDelete {
                         style: TextStyleHelper.alertDialogDeleteButton,
                       ),
                       style: ButtonStyle(
-                          backgroundColor: MaterialStatePropertyAll(
+                          backgroundColor: WidgetStatePropertyAll(
                               ColorUiHelper.carsSortColor))),
                   TextButton.icon(
                       onPressed: onBackPressed,

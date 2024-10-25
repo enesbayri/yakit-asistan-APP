@@ -57,8 +57,8 @@ class AddCarModelYearDropDown extends ConsumerWidget {
         excludeSelected: false,
         onChanged: (value) {
           isEditted
-              ? ref.read(detailPageSelectedCarProvider).model = value
-              : ref.read(addCarProvider.notifier).state.model = value;
+              ? ref.read(detailPageSelectedCarProvider).model = value!
+              : ref.read(addCarProvider.notifier).state.model = value!;
         },
       ),
     );

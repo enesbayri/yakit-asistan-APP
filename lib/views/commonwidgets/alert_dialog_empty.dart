@@ -27,7 +27,7 @@ class AlertDialogForEmptyDataControll {
                         style: TextStyleHelper.alertDialogDeleteButton,
                       ),
                       style: ButtonStyle(
-                          backgroundColor: MaterialStatePropertyAll(
+                          backgroundColor: WidgetStatePropertyAll(
                               ColorUiHelper.appMainColor))),
                   TextButton.icon(
                       onPressed: onBackPressed,
@@ -65,7 +65,7 @@ class AlertDialogForEmptyDataControll {
                         style: TextStyleHelper.alertDialogDeleteButton,
                       ),
                       style: ButtonStyle(
-                          backgroundColor: MaterialStatePropertyAll(
+                          backgroundColor: WidgetStatePropertyAll(
                               ColorUiHelper.carsSortColor))),
                   TextButton.icon(
                       onPressed: onBackPressed,
@@ -102,7 +102,7 @@ class AlertDialogForEmptyDataControll {
                         style: TextStyleHelper.alertDialogBackButton,
                       ),
                       style: ButtonStyle(
-                          backgroundColor: MaterialStatePropertyAll(
+                          backgroundColor: WidgetStatePropertyAll(
                               ColorUiHelper.appSecondColor))),
                   TextButton.icon(
                       onPressed: onBackPressed,

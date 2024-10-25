@@ -19,7 +19,7 @@ class ForgotPasswordButton extends StatelessWidget {
           height: 25,
           child: TextButton(
               style: const ButtonStyle(
-                padding: MaterialStatePropertyAll(
+                padding: WidgetStatePropertyAll(
                     EdgeInsets.only(left: 2, right: 2)),
               ),
               onPressed: () {

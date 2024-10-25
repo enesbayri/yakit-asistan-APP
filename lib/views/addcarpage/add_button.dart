@@ -24,12 +24,12 @@ class AddCarButton extends ConsumerWidget {
       builder: (context, state) {
         return TextButton.icon(
             style: ButtonStyle(
-              side: MaterialStatePropertyAll(
+              side: WidgetStatePropertyAll(
                   BorderSide(color: ColorUiHelper.appSecondColor, width: 1)),
               overlayColor:
-                  MaterialStatePropertyAll(ColorUiHelper.appSecondColor),
+                  WidgetStatePropertyAll(ColorUiHelper.appSecondColor),
               backgroundColor:
-                  MaterialStatePropertyAll(ColorUiHelper.appMainColor),
+                  WidgetStatePropertyAll(ColorUiHelper.appMainColor),
             ),
             onPressed: () {
               bool carEmptyNameValidate =

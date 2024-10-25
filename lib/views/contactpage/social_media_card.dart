@@ -22,7 +22,7 @@ class ContactUsSocialMediaCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Flexible(
       child: InkWell(
-        overlayColor: MaterialStatePropertyAll(ColorUiHelper.appSecondColor),
+        overlayColor: WidgetStatePropertyAll(ColorUiHelper.appSecondColor),
         splashColor: ColorUiHelper.appSecondColor,
         borderRadius: BorderRadius.circular(24),
         onTap: () async {

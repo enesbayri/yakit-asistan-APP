@@ -68,7 +68,7 @@ class FuelCostsStateRouter extends StatelessWidget {
                         : (costs!["shell"]![
                                     UserLocation.userPlace.toLowerCase()] ==
                                 null
-                            ? costs!["shell"]!["ankara"][0]
+                            ? (costs!["shell"]!["ankara"] == null ? costs!["shell"]!["adana"][0] : costs!["shell"]!["ankara"][0])
                             : costs!["shell"]![
                                 UserLocation.userPlace.toLowerCase()][0])
                   },
@@ -81,7 +81,7 @@ class FuelCostsStateRouter extends StatelessWidget {
                         : (costs!["shell"]![
                                     UserLocation.userPlace.toLowerCase()] ==
                                 null
-                            ? costs!["shell"]!["ankara"][1]
+                            ? (costs!["shell"]!["ankara"] == null ? costs!["shell"]!["adana"][1] : costs!["shell"]!["ankara"][1])
                             : costs!["shell"]![
                                 UserLocation.userPlace.toLowerCase()][1])
                   },
@@ -94,7 +94,7 @@ class FuelCostsStateRouter extends StatelessWidget {
                         : (costs!["shell"]![
                                     UserLocation.userPlace.toLowerCase()] ==
                                 null
-                            ? costs!["shell"]!["ankara"][2]
+                            ? (costs!["shell"]!["ankara"] == null ? costs!["shell"]!["adana"][2] : costs!["shell"]!["ankara"][2])
                             : costs!["shell"]![
                                 UserLocation.userPlace.toLowerCase()][2])
                   },
@@ -107,7 +107,7 @@ class FuelCostsStateRouter extends StatelessWidget {
                         : (costs!["shell"]![
                                     UserLocation.userPlace.toLowerCase()] ==
                                 null
-                            ? costs!["shell"]!["ankara"][3]
+                            ? (costs!["shell"]!["ankara"] == null ? costs!["shell"]!["adana"][3] : costs!["shell"]!["ankara"][3])
                             : costs!["shell"]![
                                 UserLocation.userPlace.toLowerCase()][3])
                   },
@@ -140,7 +140,7 @@ class FuelCostsStateRouter extends StatelessWidget {
                         : (costs!["opet"]![
                                     UserLocation.userPlace.toLowerCase()] ==
                                 null
-                            ? costs!["opet"]!["ankara"][0]
+                            ? (costs!["opet"]!["ankara"] == null ? costs!["opet"]!["adana"][0] : costs!["opet"]!["ankara"][0])
                             : costs!["opet"]![
                                 UserLocation.userPlace.toLowerCase()][0])
                   },
@@ -153,7 +153,7 @@ class FuelCostsStateRouter extends StatelessWidget {
                         : (costs!["opet"]![
                                     UserLocation.userPlace.toLowerCase()] ==
                                 null
-                            ? costs!["opet"]!["ankara"][1]
+                            ? (costs!["opet"]!["ankara"] == null ? costs!["opet"]!["adana"][1] : costs!["opet"]!["ankara"][1])
                             : costs!["opet"]![
                                 UserLocation.userPlace.toLowerCase()][1])
                   },
@@ -166,7 +166,7 @@ class FuelCostsStateRouter extends StatelessWidget {
                         : (costs!["opet"]![
                                     UserLocation.userPlace.toLowerCase()] ==
                                 null
-                            ? costs!["opet"]!["ankara"][2]
+                            ? (costs!["opet"]!["ankara"] == null ? costs!["opet"]!["adana"][2] : costs!["opet"]!["ankara"][2])
                             : costs!["opet"]![
                                 UserLocation.userPlace.toLowerCase()][2])
                   },
@@ -179,7 +179,7 @@ class FuelCostsStateRouter extends StatelessWidget {
                         : (costs!["opet"]![
                                     UserLocation.userPlace.toLowerCase()] ==
                                 null
-                            ? costs!["opet"]!["ankara"][3]
+                            ? (costs!["opet"]!["ankara"] == null ? costs!["opet"]!["adana"][3] : costs!["opet"]!["ankara"][3])
                             : costs!["opet"]![
                                 UserLocation.userPlace.toLowerCase()][3])
                   },
@@ -212,7 +212,7 @@ class FuelCostsStateRouter extends StatelessWidget {
                         : (costs!["soil"]![
                                     UserLocation.userPlace.toLowerCase()] ==
                                 null
-                            ? costs!["soil"]!["ankara"][0]
+                            ? (costs!["soil"]!["ankara"] == null ? costs!["soil"]!["adana"][0] : costs!["soil"]!["ankara"][0])
                             : costs!["soil"]![
                                 UserLocation.userPlace.toLowerCase()][0])
                   },
@@ -225,7 +225,7 @@ class FuelCostsStateRouter extends StatelessWidget {
                         : (costs!["soil"]![
                                     UserLocation.userPlace.toLowerCase()] ==
                                 null
-                            ? costs!["soil"]!["ankara"][1]
+                            ? (costs!["soil"]!["ankara"] == null ? costs!["soil"]!["adana"][1] : costs!["soil"]!["ankara"][1])
                             : costs!["soil"]![
                                 UserLocation.userPlace.toLowerCase()][1])
                   },
@@ -238,7 +238,7 @@ class FuelCostsStateRouter extends StatelessWidget {
                         : (costs!["soil"]![
                                     UserLocation.userPlace.toLowerCase()] ==
                                 null
-                            ? costs!["soil"]!["ankara"][2]
+                            ? (costs!["soil"]!["ankara"] == null ? costs!["soil"]!["adana"][2] : costs!["soil"]!["ankara"][2])
                             : costs!["soil"]![
                                 UserLocation.userPlace.toLowerCase()][2])
                   },
@@ -251,7 +251,7 @@ class FuelCostsStateRouter extends StatelessWidget {
                         : (costs!["soil"]![
                                     UserLocation.userPlace.toLowerCase()] ==
                                 null
-                            ? costs!["soil"]!["ankara"][3]
+                            ? (costs!["soil"]!["ankara"] == null ? costs!["soil"]!["adana"][3] : costs!["soil"]!["ankara"][3])
                             : costs!["soil"]![
                                 UserLocation.userPlace.toLowerCase()][3])
                   },
@@ -284,7 +284,7 @@ class FuelCostsStateRouter extends StatelessWidget {
                         : (costs!["go"]![
                                     UserLocation.userPlace.toLowerCase()] ==
                                 null
-                            ? costs!["go"]!["ankara"][0]
+                            ? (costs!["go"]!["ankara"] == null ? costs!["go"]!["adana"][0] : costs!["go"]!["ankara"][0])
                             : costs!["go"]![
                                 UserLocation.userPlace.toLowerCase()][0])
                   },
@@ -297,7 +297,7 @@ class FuelCostsStateRouter extends StatelessWidget {
                         : (costs!["go"]![
                                     UserLocation.userPlace.toLowerCase()] ==
                                 null
-                            ? costs!["go"]!["ankara"][1]
+                            ? (costs!["go"]!["ankara"] == null ? costs!["go"]!["adana"][1] : costs!["go"]!["ankara"][1])
                             : costs!["go"]![
                                 UserLocation.userPlace.toLowerCase()][1])
                   },
@@ -310,7 +310,7 @@ class FuelCostsStateRouter extends StatelessWidget {
                         : (costs!["go"]![
                                     UserLocation.userPlace.toLowerCase()] ==
                                 null
-                            ? costs!["go"]!["ankara"][2]
+                            ? (costs!["go"]!["ankara"] == null ? costs!["go"]!["adana"][2] : costs!["go"]!["ankara"][2])
                             : costs!["go"]![
                                 UserLocation.userPlace.toLowerCase()][2])
                   },
@@ -323,7 +323,7 @@ class FuelCostsStateRouter extends StatelessWidget {
                         : (costs!["go"]![
                                     UserLocation.userPlace.toLowerCase()] ==
                                 null
-                            ? costs!["go"]!["ankara"][3]
+                            ? (costs!["go"]!["ankara"] == null ? costs!["go"]!["adana"][3] : costs!["go"]!["ankara"][3])
                             : costs!["go"]![
                                 UserLocation.userPlace.toLowerCase()][3])
                   },
@@ -356,7 +356,7 @@ class FuelCostsStateRouter extends StatelessWidget {
                         : (costs!["po"]![
                                     UserLocation.userPlace.toLowerCase()] ==
                                 null
-                            ? costs!["po"]!["ankara"][0]
+                            ? (costs!["po"]!["ankara"] == null ? costs!["po"]!["adana"][0] : costs!["po"]!["ankara"][0])
                             : costs!["po"]![
                                 UserLocation.userPlace.toLowerCase()][0])
                   },
@@ -369,7 +369,7 @@ class FuelCostsStateRouter extends StatelessWidget {
                         : (costs!["po"]![
                                     UserLocation.userPlace.toLowerCase()] ==
                                 null
-                            ? costs!["po"]!["ankara"][1]
+                            ? (costs!["po"]!["ankara"] == null ? costs!["po"]!["adana"][1] : costs!["po"]!["ankara"][1])
                             : costs!["po"]![
                                 UserLocation.userPlace.toLowerCase()][1])
                   },
@@ -382,7 +382,7 @@ class FuelCostsStateRouter extends StatelessWidget {
                         : (costs!["po"]![
                                     UserLocation.userPlace.toLowerCase()] ==
                                 null
-                            ? costs!["po"]!["ankara"][2]
+                            ? (costs!["po"]!["ankara"] == null ? costs!["po"]!["adana"][2] : costs!["po"]!["ankara"][2])
                             : costs!["po"]![
                                 UserLocation.userPlace.toLowerCase()][2])
                   },
@@ -395,7 +395,7 @@ class FuelCostsStateRouter extends StatelessWidget {
                         : (costs!["po"]![
                                     UserLocation.userPlace.toLowerCase()] ==
                                 null
-                            ? costs!["po"]!["ankara"][3]
+                            ? (costs!["po"]!["ankara"] == null ? costs!["po"]!["adana"][3] : costs!["po"]!["ankara"][3])
                             : costs!["po"]![
                                 UserLocation.userPlace.toLowerCase()][3])
                   },
@@ -428,7 +428,7 @@ class FuelCostsStateRouter extends StatelessWidget {
                         : (costs!["tp"]![
                                     UserLocation.userPlace.toLowerCase()] ==
                                 null
-                            ? costs!["tp"]!["ankara"][0]
+                            ? (costs!["tp"]!["ankara"] == null ? costs!["tp"]!["adana"][0] : costs!["tp"]!["ankara"][0])
                             : costs!["tp"]![
                                 UserLocation.userPlace.toLowerCase()][0])
                   },
@@ -441,7 +441,7 @@ class FuelCostsStateRouter extends StatelessWidget {
                         : (costs!["tp"]![
                                     UserLocation.userPlace.toLowerCase()] ==
                                 null
-                            ? costs!["tp"]!["ankara"][1]
+                            ? (costs!["tp"]!["ankara"] == null ? costs!["tp"]!["adana"][1] : costs!["tp"]!["ankara"][1])
                             : costs!["tp"]![
                                 UserLocation.userPlace.toLowerCase()][1])
                   },
@@ -454,7 +454,7 @@ class FuelCostsStateRouter extends StatelessWidget {
                         : (costs!["tp"]![
                                     UserLocation.userPlace.toLowerCase()] ==
                                 null
-                            ? costs!["tp"]!["ankara"][2]
+                            ? (costs!["tp"]!["ankara"] == null ? costs!["tp"]!["adana"][2] : costs!["tp"]!["ankara"][2])
                             : costs!["tp"]![
                                 UserLocation.userPlace.toLowerCase()][2])
                   },
@@ -467,7 +467,7 @@ class FuelCostsStateRouter extends StatelessWidget {
                         : (costs!["tp"]![
                                     UserLocation.userPlace.toLowerCase()] ==
                                 null
-                            ? costs!["tp"]!["ankara"][3]
+                            ? (costs!["tp"]!["ankara"] == null ? costs!["tp"]!["adana"][3] : costs!["tp"]!["ankara"][3])
                             : costs!["tp"]![
                                 UserLocation.userPlace.toLowerCase()][3])
                   },
@@ -500,7 +500,7 @@ class FuelCostsStateRouter extends StatelessWidget {
                         : (costs!["moil"]![
                                     UserLocation.userPlace.toLowerCase()] ==
                                 null
-                            ? costs!["moil"]!["ankara"][0]
+                            ? (costs!["moil"]!["ankara"] == null ? costs!["moil"]!["adana"][0] : costs!["moil"]!["ankara"][0])
                             : costs!["moil"]![
                                 UserLocation.userPlace.toLowerCase()][0])
                   },
@@ -513,7 +513,7 @@ class FuelCostsStateRouter extends StatelessWidget {
                         : (costs!["moil"]![
                                     UserLocation.userPlace.toLowerCase()] ==
                                 null
-                            ? costs!["moil"]!["ankara"][1]
+                            ? (costs!["moil"]!["ankara"] == null ? costs!["moil"]!["adana"][1] : costs!["moil"]!["ankara"][1])
                             : costs!["moil"]![
                                 UserLocation.userPlace.toLowerCase()][1])
                   },
@@ -526,7 +526,7 @@ class FuelCostsStateRouter extends StatelessWidget {
                         : (costs!["moil"]![
                                     UserLocation.userPlace.toLowerCase()] ==
                                 null
-                            ? costs!["moil"]!["ankara"][2]
+                            ? (costs!["moil"]!["ankara"] == null ? costs!["moil"]!["adana"][2] : costs!["moil"]!["ankara"][2])
                             : costs!["moil"]![
                                 UserLocation.userPlace.toLowerCase()][2])
                   },
@@ -539,7 +539,7 @@ class FuelCostsStateRouter extends StatelessWidget {
                         : (costs!["moil"]![
                                     UserLocation.userPlace.toLowerCase()] ==
                                 null
-                            ? costs!["moil"]!["ankara"][3]
+                            ? (costs!["moil"]!["ankara"] == null ? costs!["moil"]!["adana"][3] : costs!["moil"]!["ankara"][3])
                             : costs!["moil"]![
                                 UserLocation.userPlace.toLowerCase()][3])
                   },
@@ -572,7 +572,7 @@ class FuelCostsStateRouter extends StatelessWidget {
                         : (costs!["aytemiz"]![
                                     UserLocation.userPlace.toLowerCase()] ==
                                 null
-                            ? costs!["aytemiz"]!["ankara"][0]
+                            ? (costs!["aytemiz"]!["ankara"] == null ? costs!["aytemiz"]!["adana"][0] : costs!["aytemiz"]!["ankara"][0])
                             : costs!["aytemiz"]![
                                 UserLocation.userPlace.toLowerCase()][0])
                   },
@@ -585,7 +585,7 @@ class FuelCostsStateRouter extends StatelessWidget {
                         : (costs!["aytemiz"]![
                                     UserLocation.userPlace.toLowerCase()] ==
                                 null
-                            ? costs!["aytemiz"]!["ankara"][1]
+                            ? (costs!["aytemiz"]!["ankara"] == null ? costs!["aytemiz"]!["adana"][1] : costs!["aytemiz"]!["ankara"][1])
                             : costs!["aytemiz"]![
                                 UserLocation.userPlace.toLowerCase()][1])
                   },
@@ -598,7 +598,7 @@ class FuelCostsStateRouter extends StatelessWidget {
                         : (costs!["aytemiz"]![
                                     UserLocation.userPlace.toLowerCase()] ==
                                 null
-                            ? costs!["aytemiz"]!["ankara"][2]
+                            ? (costs!["aytemiz"]!["ankara"] == null ? costs!["aytemiz"]!["adana"][2] : costs!["aytemiz"]!["ankara"][2])
                             : costs!["aytemiz"]![
                                 UserLocation.userPlace.toLowerCase()][2])
                   },
@@ -611,7 +611,7 @@ class FuelCostsStateRouter extends StatelessWidget {
                         : (costs!["aytemiz"]![
                                     UserLocation.userPlace.toLowerCase()] ==
                                 null
-                            ? costs!["aytemiz"]!["ankara"][3]
+                            ? (costs!["aytemiz"]!["ankara"] == null ? costs!["aytemiz"]!["adana"][3] : costs!["aytemiz"]!["ankara"][3])
                             : costs!["aytemiz"]![
                                 UserLocation.userPlace.toLowerCase()][3])
                   },

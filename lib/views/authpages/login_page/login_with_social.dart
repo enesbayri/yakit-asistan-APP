@@ -40,7 +40,7 @@ class LoginWithSocialCard extends StatelessWidget {
       child: TextButton(
         onPressed: onPressed,
         style: const ButtonStyle(
-          padding: MaterialStatePropertyAll(EdgeInsets.only(left: 10)),
+          padding: WidgetStatePropertyAll(EdgeInsets.only(left: 10)),
         ),
         child: SizedBox(
           child: Row(

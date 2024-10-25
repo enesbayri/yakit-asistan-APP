@@ -60,7 +60,7 @@ class AddTripCarNameDropDown extends ConsumerWidget {
         items: cars.map((e) => e.name).toList(),
         excludeSelected: false,
         onChanged: (value) {
-          ref.read(addTripProvider.notifier).state.carName = value;
+          ref.read(addTripProvider.notifier).state.carName = value!;
         },
       ),
     );

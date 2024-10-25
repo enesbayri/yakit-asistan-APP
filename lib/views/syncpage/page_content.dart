@@ -40,6 +40,7 @@ class _SynchroPageContentsConsumerState
     Future.delayed(
       const Duration(milliseconds: 500),
       () => AlertDialogForDelete.showWarningDialog(
+        // ignore: use_build_context_synchronously
         context: context,
         title: "Veri Senkronizasyonunda Dikkat!",
         onButtonPressed: () {

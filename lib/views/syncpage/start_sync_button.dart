@@ -37,13 +37,13 @@ class SyncStartButton extends ConsumerWidget {
                         "synchronized";
                   },
                   style: ButtonStyle(
-                      backgroundColor: MaterialStatePropertyAll(
+                      backgroundColor: WidgetStatePropertyAll(
                           ColorUiHelper.syncPageMainColor),
-                      overlayColor: MaterialStatePropertyAll(
+                      overlayColor: WidgetStatePropertyAll(
                           ColorUiHelper.appSecondColor),
-                      side: MaterialStatePropertyAll(BorderSide(
+                      side: WidgetStatePropertyAll(BorderSide(
                           color: ColorUiHelper.appBgColor, width: 2)),
-                      shadowColor: MaterialStatePropertyAll(
+                      shadowColor: WidgetStatePropertyAll(
                           ColorUiHelper.syncPageMainColor)),
                   child: Text(
                     "Eşitle!",

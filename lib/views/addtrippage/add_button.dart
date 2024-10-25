@@ -34,10 +34,10 @@ class AddTripButton extends ConsumerWidget {
       height: 40,
       child: TextButton.icon(
           style: ButtonStyle(
-            side: MaterialStatePropertyAll(
+            side: WidgetStatePropertyAll(
                 BorderSide(color: ColorUiHelper.appMainColor, width: 1)),
             overlayColor:
-                MaterialStatePropertyAll(ColorUiHelper.appSecondColor),
+                WidgetStatePropertyAll(ColorUiHelper.appSecondColor),
           ),
           onPressed: () {
             Trip selectedCarTrip = (ref.read(addTripProvider))

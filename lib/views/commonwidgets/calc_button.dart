@@ -13,9 +13,9 @@ class CalcPagesCalculateButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton.icon(
         style: ButtonStyle(
-          side: MaterialStatePropertyAll(
+          side: WidgetStatePropertyAll(
               BorderSide(color: ColorUiHelper.appMainColor, width: 1)),
-          overlayColor: MaterialStatePropertyAll(ColorUiHelper.appSecondColor),
+          overlayColor: WidgetStatePropertyAll(ColorUiHelper.appSecondColor),
         ),
         onPressed: onPressed,
         icon: Icon(
