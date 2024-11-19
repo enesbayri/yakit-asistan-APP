@@ -124,7 +124,7 @@ class HiveDatabase extends Database {
       cars.removeWhere((car) => car.name == currentCar.name);
       int newCount = cars.length;
       if (lastCount != newCount) {
-        if(currentCar.imageUrl.contains("https")==false){
+        if(currentCar.imageUrl.contains("https")==false && currentCar.imageUrl.contains("assets")==false){
           await File(currentCar.imageUrl).delete();
         }
       }

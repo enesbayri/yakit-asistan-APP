@@ -22,24 +22,26 @@ import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  getLocation();
+  
+  // GetIt ile bağımlılıkları kaydediyoruz
   getitSetup();
-  await hiveSetup();
-  apiRequestControl();
+
+  // Paralel async işlemler
+  await Future.wait([
+    hiveSetup(),
+    Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform),
+  ]);
+
+  // Gerekli olmayan işlemleri daha sonra yapacağız
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
     systemNavigationBarColor: ColorUiHelper.appBgColor,
     systemNavigationBarDividerColor: ColorUiHelper.appBgColor,
     statusBarColor: ColorUiHelper.appTransparentColor,
   ));
-
   SystemChrome.setPreferredOrientations(
       [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
 
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
-  unawaited(MobileAds.instance.initialize());
-
+  // Uygulamayı başlatıyoruz
   runApp(const ProviderScope(child: FuelAssistant()));
 }
 
@@ -53,18 +55,35 @@ class FuelAssistant extends StatefulWidget {
 class _FuelAssistantState extends State<FuelAssistant>
     with TickerProviderStateMixin {
   bool _isInitialized = false;
+
   @override
   void initState() {
     super.initState();
+
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (!_isInitialized) {
+        // Animasyonları başlat
         AnimationControll.createAnimations(this, context);
+
+        // Ekran boyutlarını al
         _getScreenSize();
-        _isInitialized = true; // Sadece bir kez çalıştırılacak
+
+        // Gerekli olmayan işlemleri lazy olarak başlat
+        _lazyInitialization();
+
+        _isInitialized = true;
       }
     });
   }
 
+  // Lazy Initialization ile açılış sonrası işlemler
+  void _lazyInitialization() {
+    Future.microtask(() async {
+      getLocation(); // Konum verisi başlat
+      apiRequestControl(); // API kontrolleri
+      await MobileAds.instance.initialize(); // Reklam servisi
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -94,7 +113,8 @@ class _FuelAssistantState extends State<FuelAssistant>
       ),
     );
   }
-   void _getScreenSize() {
+
+  void _getScreenSize() {
     // Ekran ölçülerini alıyoruz
     startScreenSized(
         MediaQuery.of(context).size.width, MediaQuery.of(context).size.height);
