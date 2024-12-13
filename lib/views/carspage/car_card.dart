@@ -122,7 +122,7 @@ class MyCarCard extends StatelessWidget {
                         ),
                         image: DecorationImage(
                             image: (carImg == "" ||
-                                    carImg == "" 'assets/icons/addCarIcon.png')
+                                    carImg.contains("assets"))
                                 ? const AssetImage("assets/cars/car.jpg")
                                 : (carImg.contains("https") == true
                                     ? NetworkImage(carImg) as ImageProvider

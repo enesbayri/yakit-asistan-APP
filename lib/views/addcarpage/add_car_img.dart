@@ -84,7 +84,7 @@ class _AddCarImgButtonState extends ConsumerState<AddCarImgButton> {
           shape: BoxShape.circle,
           color: ColorUiHelper.appBgColor,
           image: DecorationImage(
-              image: (imgUrl == "assets/icons/addCarIcon.png")
+              image: (imgUrl.contains("assets") )
                   ? AssetImage(imgUrl)
                   : (imgUrl.contains("https") == true
                       ? NetworkImage(imgUrl) as ImageProvider

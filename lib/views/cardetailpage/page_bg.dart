@@ -24,7 +24,7 @@ class CarDetailBackground extends ConsumerWidget {
         decoration: BoxDecoration(
           image: DecorationImage(
               image: (car.imageUrl == "" ||
-                      car.imageUrl == "" 'assets/icons/addCarIcon.png')
+                      car.imageUrl.contains("assets"))
                   ? const AssetImage("assets/cars/car.jpg")
                   : (car.imageUrl.contains("https") == true
                       ? NetworkImage(car.imageUrl) as ImageProvider

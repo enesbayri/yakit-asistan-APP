@@ -28,7 +28,7 @@ class TripsFilterCarCard extends StatelessWidget {
                 : ColorUiHelper.appMainColor),
         image: DecorationImage(
             image:
-                (carImgUrl == "" || carImgUrl == "assets/icons/addCarIcon.png")
+                (carImgUrl == "" || carImgUrl.contains("assets"))
                     ? const AssetImage("assets/cars/car.jpg")
                     : (carImgUrl.contains("https") == true
                         ? NetworkImage(carImgUrl) as ImageProvider

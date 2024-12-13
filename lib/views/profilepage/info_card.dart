@@ -32,8 +32,7 @@ class ProfileCarInfoCard extends StatelessWidget {
               decoration: BoxDecoration(
                 image: DecorationImage(
                     image: (imgUrl == "" ||
-                            imgUrl == "assets/icons/addCarIcon.png" ||
-                            imgUrl == "assets/cars/car3.jpg")
+                            imgUrl.contains("assets"))
                         ? const AssetImage("assets/cars/car.jpg")
                         : (imgUrl.contains("https") == true
                             ? NetworkImage(imgUrl) as ImageProvider
